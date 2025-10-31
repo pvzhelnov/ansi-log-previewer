@@ -1,0 +1,38 @@
+{
+  "name": "ansi-log-wrapper",
+  "displayName": "ANSI Log Preview Wrapper",
+  "description": "Makes .log files open directly in the iliazeus.vscode-ansi preview as a real editor.",
+  "publisher": "pvzhelnov",
+  "author": {
+    "name": "Pavel Zhelnov",
+    "email": "pzhelnov@p1m.org",
+    "url": "https://github.com/pvzhelnov"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "activationEvents": [
+    "onLanguage:log"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "ansiLog.preview",
+        "displayName": "ANSI Log Preview",
+        "selector": [
+          {
+            "filenamePattern": "*.log"
+          }
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^3.6.2"
+  }
+}

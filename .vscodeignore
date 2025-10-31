@@ -1,0 +1,5 @@
+.volta
+.local
+node_modules
+build.sh
+.gitignore
